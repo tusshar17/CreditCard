@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Credit Card</title>
+</head>
+<body onload="load()">
+
+    <div id="card">
+
+        <div class="bank-logo">
+            <h1 class="title">credit card</h1>
+            <img src="banklogo.png" alt="bank-logo">
+            <h1 class="bank-name">sbi</h1>
+        </div>
+
+        <div class="middle-sec">
+            <img src="chip.png" alt="chip" class="chip"/>
+            <div class="validity">
+                <h1>valid upto :</h1>
+                <h2>month year</h2>
+                <input type="text" maxlength="2" id="month-valid" oninput="nxtS('month-valid','year-valid')">
+                <h3 class="slash">/</h3>
+                <input type="text" maxlength="2" id="year-valid" oninput="nxtS('year-valid','acc1')">
+            </div>
+            <img src="map.png" alt="map" class="map"/>
+        </div>
+
+        <div class="card-number">
+          <input type="text" id="acc1" maxlength="4" oninput="nxt('acc1','acc2')">
+          <input type="text" id="acc2" maxlength="4" oninput="nxt('acc2','acc3')">
+          <input type="text" id="acc3" maxlength="4" oninput="nxt('acc3','acc4')">
+          <input type="text" id="acc4" maxlength="4" oninput="nxt('acc4','account-name')">
+        </div>
+
+        <input type="text" maxlength="20" id="account-name" oninput="final()">
+
+        <h1 class="visa-lbl">visa</h1>
+
+
+
+    </div>
+    <script src="index.js"></script>  
+</body>
+</html>
